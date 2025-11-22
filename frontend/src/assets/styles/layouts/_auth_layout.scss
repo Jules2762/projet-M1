@@ -1,0 +1,17 @@
+@use "../abstracts/mixins" as *;
+
+.auth-container{
+    @include flex-row;
+    overflow:hidden;
+    .auth-hero{
+        width: 35%;
+        height: 100vh;
+        background-color: blue;
+    }
+    .auth-content{
+        width: 65%;
+        @include flex-col;
+        @include center-center;
+        background-color: red;
+    }
+}

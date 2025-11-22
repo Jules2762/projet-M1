@@ -1,0 +1,10 @@
+
+//layouts
+@use "./layouts/auth_layout" as *;
+
+//mixins
+@use "./abstracts/mixins" as *;
+
+body{
+    margin: 0;
+}
