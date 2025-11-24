@@ -1,0 +1,38 @@
+@use "../../abstracts/breakpoints"as *;
+@use "../../abstracts/mixins"as *;
+
+.login-container {
+    width: 50%;
+    max-width: 50%;
+    @include flex-col(12px);
+    @include card(30px,white);
+
+   
+        text-align: center;
+    
+
+    @include max-width(md) {
+        width: 80%;
+        max-width: 80%;
+
+    }
+
+    form {
+        @include flex-col(12px);
+        
+    }
+    .login-options{
+            @include flex-row;
+            @include row-between-center;
+            label{
+                @include flex-row(4px);
+                @include row-start-center;
+            }
+        }
+.login-footer{
+        width: 100%;
+        @include flex-row;
+
+        @include  row-start-center;
+    }
+}

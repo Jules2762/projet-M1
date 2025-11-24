@@ -1,0 +1,40 @@
+@use "../../abstracts/mixins"as *;
+@use "../../abstracts/breakpoints"as *;
+
+.signup-container {
+    width: 60%;
+    @include card(30px, white);
+    text-align: center;
+
+    @include max-width(md) {
+        width: 80%;
+    }
+
+    form {
+        .matricule-enter-from,.matricule-leave-to{
+            transform: translateY(-50px);
+            opacity: -1;
+        }
+        .matricule-enter-active,.matricule-leave-active{
+            transition: all 0.2s ease;
+        }
+        width: 100%;
+        @include flex-col(12px);
+
+        .full-name {
+            @include flex-row(12px);
+            align-items: center;
+            width: 100%;
+
+
+        }
+        .signup-button-container{
+            @include flex-row;
+            @include row-between-center;
+            .signup-login-link{
+                @include flex-row(6px);
+                @include row-start-center;
+            }
+        }
+    }
+}

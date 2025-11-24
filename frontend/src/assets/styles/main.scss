@@ -1,10 +1,26 @@
 
 //layouts
 @use "./layouts/auth_layout" as *;
+@use "./layouts/forgot_password_layout" as *;
+
+//views
+@use "./views/auth/login_view" as *;
+@use "./views/auth/signup_view" as *;
+@use "./views/auth/forgot_password/search_account" as *;
+@use "./views/auth/forgot_password/verification_account" as *;
+
+//components
+@use "./components/ui/input" as *;
+@use "./components/ui/button" as *;
+@use "./components/ui/select" as *;
 
 //mixins
 @use "./abstracts/mixins" as *;
 
+//base
+@use "./base/typography" as *;
+
 body{
     margin: 0;
 }
+

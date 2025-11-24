@@ -1,3 +1,35 @@
-@mixin min-width(){
-    @media (min-width:)
+@use "./libraries" as *;
+@use "sass:map";
+
+@mixin min-width($size){
+    @if map.has-key($breakpoints , $size ){
+        @media (min-width : map.get($breakpoints,$size)){
+            @content;
+        }
+    }
+    @else {
+        @warn "no breakpoint founded";
+    }
 }
+
+@mixin max-width($size){
+    @if map.has-key($breakpoints , $size ){
+        @media (max-width : map.get($breakpoints,$size)){
+            @content;
+        }
+    }
+    @else {
+        @warn "no breakpoint founded";
+    }
+}
+@mixin min-max-width($min-size,$max-size){
+    @if map.has-key($breakpoints , $min-size )and map.has-key($breakpoints , $max-size ) {
+        @media (min-width : map.get($breakpoints,$min-size)) and ((max-width : map.get($breakpoints,$max-size))) {
+            @content;
+        }
+    }
+    @else {
+        @warn "no breakpoint founded";
+    }
+}
+

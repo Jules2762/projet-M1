@@ -1,0 +1,53 @@
+@use "../../abstracts/libraries"as *;
+@use "../../abstracts/mixins"as *;
+@use "sass:map";
+
+button {
+    border: none;
+    height: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 3px;
+    background-color: transparent;
+
+    @each $key,
+    $value in $button-colors {
+        &:is(.btn-#{$key}) {
+            background-color: $value;
+            color: map.get($button-text-colors, $key);
+
+
+
+            @if $key=="outlined" {
+                border: 1px solid map.get($button-text-colors, $key);
+            }
+
+            @if $key=="link" {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .button-content {
+        @include center-center;
+    }
+
+    .btn-icon-position-left {
+        @include flex-row;
+    }
+
+    .btn-icon-position-left {
+        @include flex-row-reverse;
+    }
+
+    &:is(.button-loading) {
+        opacity: 0.5;
+    }
+    &:is(.fullWidth){
+        width: 100%;
+    }
+    
+
+}

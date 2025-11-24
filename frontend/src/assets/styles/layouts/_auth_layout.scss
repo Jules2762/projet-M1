@@ -1,4 +1,7 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/libraries" as *;
+@use "sass:map";
 
 .auth-container{
     @include flex-row;
@@ -6,12 +9,24 @@
     .auth-hero{
         width: 35%;
         height: 100vh;
-        background-color: blue;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        @include max-width(lg){
+            display: none;
+        };
+
     }
     .auth-content{
         width: 65%;
+        height: 100vh;
+        @include max-width(lg){
+            width: 100%
+        };
         @include flex-col;
         @include center-center;
-        background-color: red;
+        background-color:map.get($colors,background);
     }
 }
