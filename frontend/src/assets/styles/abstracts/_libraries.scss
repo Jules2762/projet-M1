@@ -1,0 +1,45 @@
+$breakpoints: (xs: 480px,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px);
+$font-sizes: ( // '5xl': 3rem,
+
+  '4xl': 2.25rem,
+
+  '3xl': 1.875rem,
+
+  '2xl': 1.5rem,
+
+  xl: 1.25rem,
+
+  lg: 1.125rem,
+
+  base: 1rem,
+
+  sm: 0.875rem,
+  xs: 0.75rem,
+);
+$colors: (primary: #3490dc,
+  secondary: #ffed4a,
+  outlined: transparent,
+  danger: #e3342f,
+  background: #f8fafc,
+  text: #2d3748,
+  warning: #ff9800,
+  success: #4caf50,
+  info: #2196f3,
+);
+$button-colors: (primary: #3490dc,
+  secondary: #ffed4a,
+  outlined: transparent,
+  link:transparent,
+  danger: #e3342f,
+
+);
+$button-text-colors: (primary: white,
+  secondary: #2d3748,
+  outlined: #2d3748,
+  link:rgb(68, 68, 255),
+  danger: white,
+);

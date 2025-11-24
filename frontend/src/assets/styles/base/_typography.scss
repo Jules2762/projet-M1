@@ -1,0 +1,24 @@
+@use "../abstracts/libraries" as *;
+@use "sass:map";
+@use "sass:list";
+//h1 ... h6
+
+@for $i from 1 through 6 {
+    $key: list.nth(map.keys($font-sizes),$i);
+    h#{$i} {
+        font-size: map.get($font-sizes, $key);
+        font-weight: bold;
+        margin: 0;
+        padding: 0.5rem 0;
+    }
+}
+p{
+    font-size: map.get($font-sizes, sm);
+    margin: 0;
+    padding: 0.25rem 0;
+    color: rgb(135, 135, 135);
+}
+label{
+    color: rgb(130, 130, 130);
+    font-size: map.get($font-sizes,sm);
+}

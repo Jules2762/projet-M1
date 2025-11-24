@@ -1,0 +1,20 @@
+@use "../../../abstracts/mixins" as *;
+@use "../../../abstracts/breakpoints" as *;
+.search-account-container{
+    width: 50%;
+    // @include min-max-width(md,lg){
+    //     width: 50%;
+    // }
+    @include max-width(md){
+        width:80%;
+    }
+    @include card(30px,white);
+    p{
+        margin-bottom: 12px;
+    }
+    form{
+        @include flex-col(12px);
+    }
+    
+
+}

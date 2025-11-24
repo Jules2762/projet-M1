@@ -1,0 +1,22 @@
+@use "../../../abstracts/mixins" as *;
+@use "../../../abstracts/breakpoints" as *;
+.verification-account-container{
+    width: 50%;
+    text-align:center;
+    @include card(30px,white);
+    @include max-width(md){
+        width: 80%;
+    }
+    .header-content{
+       .button-resend{
+        color: rgb(65, 65, 255);
+       
+        &:is(.unclickable-resend){
+            cursor: not-allowed;
+        }
+        &:is(.clickable-resend){
+            cursor: pointer;
+        }
+       }
+    }
+}

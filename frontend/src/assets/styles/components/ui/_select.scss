@@ -1,0 +1,30 @@
+
+@use "../../abstracts/mixins" as *;
+
+.select-container{
+
+  @include flex-col(4px);
+   @include col-center-start;
+    .select-content{
+        border: 1px solid #ccc;
+         height: 30px;
+         border-radius: 3px;
+         width: 100%; 
+         @include flex-row;
+         align-items: center;
+         .select-icon{
+            color: #4e4e4e;
+            font-size: 1.125rem;
+            padding-left: 6px;
+            padding-right: 6px;
+            border-right:1px solid #4e4e4e;
+         }
+
+        select{
+            border: none;
+            outline: none;
+            width: 98%;
+            height: 98%;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@use "../../abstracts//mixins"as *;
+
+.input-container {
+    width: 100%;
+    @include flex-col(3px);
+
+    label {
+        @include flex-row(12px);
+
+        :nth-child(2) {
+            color: red;
+        }
+    }
+
+    .input-content {
+        border: 1px solid #ccc;
+        padding: 1px;
+        height: 30px;
+        border-radius: 3px;
+        @include flex-row;
+        align-items: center;
+
+        .input-icon {
+            color: #4e4e4e;
+            border-right: 1px solid #4e4e4e;
+            font-size: 1.125rem;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+
+        input {
+            width: 95%;
+            height: 95%;
+            border: none;
+            outline: none;
+            padding-left: 6px;
+        }
+
+    }
+}
